@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootswatch/dist/lux/bootstrap.css';
+import Heading from './components/Heading';
+import Books  from './containers/Books';
+import Buttons from './components/Button';
+import AddForm from './containers/AddForm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+
+  render() {
+    return (
+      <>
+        <table className="table table-dark">
+          <Heading/>
+          <tbody>
+             <Books/> 
+          </tbody>
+        </table>
+      </>
+
+    )};
+  
 }
 
-export default App;
+export default App
